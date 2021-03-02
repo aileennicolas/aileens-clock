@@ -65,7 +65,7 @@ function displayPomodoroCounter(){
             var pomodoroMinutes = Math.floor(distance  / (1000 * 60)); 
             var pomodoroSeconds = ("0" + Math.floor((distance % (1000 * 60)) / 1000)).slice(-2); 
             document.getElementById('currentpomodoro').innerHTML = 
-            "Pomodoro time remaining: " + pomodoroMinutes + " : " + pomodoroSeconds; 
+            pomodoroMinutes + " : " + pomodoroSeconds; 
         }
 
     } else {
@@ -74,7 +74,7 @@ function displayPomodoroCounter(){
     }
 
     document.getElementById('counter').innerHTML =
-        "Number of pomodoros: " + pomodoro_count;
+        "!pomo: " + pomodoro_count;
     if(!counterActive()){
         document.getElementById('currentpomodoro').hidden = true;
     } else {
